@@ -1,5 +1,6 @@
+<app-loading [loading]="loading"></app-loading>
 <div class="row">
     <div class="col-6" *ngFor="let post of posts">
-        <app-post-card [post]="post" (titleClicked)="navigateToPost($event)"></app-post-card>
+        <app-post-card [post]="post" (buttonClicked)="buttonClicked($event)"></app-post-card>
     </div>
 </div>

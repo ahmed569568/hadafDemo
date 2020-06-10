@@ -1,8 +1,11 @@
 <div class="card my-3">
     <div class="card-body">
-        <h5 class="card-title" (click)="titleClicked.emit(post.id)" [tooltip]="(post.title).length > 50 ? post.title : ''">{{(post.title).length > 50 ? ((post.title).substr(0,50) + '...') : post.title}}</h5>
-        <p class="card-text">{{post.body}}</p>
-        <a href="#" class="card-link">Edit</a>
-        <a href="#" class="card-link">Delete</a>
+        <h5 *ngIf="!post">Loading...</h5>
+        <h5 class="card-title pointer" (click)="buttonClicked.emit({type: 'view', id: post.id})" [tooltip]="(post?.title).length > 50 ? post?.title : ''">{{(post?.title).length > 50 ? ((post?.title).substr(0,50) + '...') : post?.title}}</h5>
+        <p class="card-text">{{post?.body}}</p>
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-info mr-2" (click)="buttonClicked.emit({type: 'edit', id: post.id})">Edit</button>
+            <button class="btn btn-danger" (click)="buttonClicked.emit({type: 'delete', id: post.id})">Delete</button>
+        </div>
     </div>
 </div>

@@ -1,16 +1,16 @@
+import { PostsRoutingModule } from './posts-routing.module';
 import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PostsListComponent, SinglePostComponent } from './components';
-import { HttpClientModule } from '@angular/common/http';
-
-
+import { PostsListComponent, SinglePostComponent, PostFormComponent } from './components';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [PostsListComponent, SinglePostComponent],
+  declarations: [PostsListComponent, SinglePostComponent, PostFormComponent],
   imports: [
     CommonModule,
-    HttpClientModule,
+    PostsRoutingModule,
+    ReactiveFormsModule,
     SharedModule
   ],
   exports: [PostsListComponent]

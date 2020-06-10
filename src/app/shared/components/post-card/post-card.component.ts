@@ -3,12 +3,12 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-post-card',
   templateUrl: './post-card.component.html',
-  styleUrls: ['./post-card.component.css']
+  styleUrls: ['./post-card.component.scss']
 })
 export class PostCardComponent implements OnInit {
 
   @Input() post;
-  @Output() titleClicked: EventEmitter<any> = new EventEmitter();
+  @Output() buttonClicked: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
