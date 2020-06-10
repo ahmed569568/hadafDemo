@@ -1,0 +1,8 @@
+<div class="card my-3">
+    <div class="card-body">
+        <h5 class="card-title" (click)="titleClicked.emit(post.id)" [tooltip]="(post.title).length > 50 ? post.title : ''">{{(post.title).length > 50 ? ((post.title).substr(0,50) + '...') : post.title}}</h5>
+        <p class="card-text">{{post.body}}</p>
+        <a href="#" class="card-link">Edit</a>
+        <a href="#" class="card-link">Delete</a>
+    </div>
+</div>
