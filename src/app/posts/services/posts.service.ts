@@ -39,8 +39,8 @@ export class PostsService {
   }
 
   /**
-   * Delete post
-   * @param id post id
+   * delete post 
+   * @param id 
    */
   deletePost(id) {
     return this.http.delete(`${environment.serverUrl}/posts/${id}`);
