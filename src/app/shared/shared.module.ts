@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { PostCardComponent, NavbarComponent, LoadingComponent, BreadcrumbComponent } from './components';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -6,6 +7,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
   declarations: [PostCardComponent, NavbarComponent, LoadingComponent, BreadcrumbComponent],
   imports: [
     CommonModule,
+    RouterModule,
     TooltipModule.forRoot()
   ],
   exports: [PostCardComponent, NavbarComponent, LoadingComponent, BreadcrumbComponent],
