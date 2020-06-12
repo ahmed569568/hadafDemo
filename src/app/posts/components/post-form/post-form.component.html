@@ -1,4 +1,5 @@
 <app-loading [loading]="loading"></app-loading>
+<app-breadcrumb [post]="{title: form.controls.title.value}"></app-breadcrumb>
 <form [formGroup]="form" (ngSubmit)="submit()">
     <div class="form-group">
         <label for="postTitleField">Post title</label>
