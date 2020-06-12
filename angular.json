@@ -118,12 +118,7 @@
                 },
                 "deploy": {
                     "builder": "angular-cli-ghpages:deploy",
-                    "options": {
-                        "baseHref": "https://ahmed569568.github.io/hadafDemo",
-                        "name": "hadafDemo",
-                        "email": "ahmed569568@gmail.com",
-                        "repo": "https://github.com/ahmed569568/hadafDemo"
-                    }
+                    "options": {}
                 }
             }
         }
